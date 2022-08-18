@@ -12,7 +12,7 @@ To make the most of the sessions, please bring your laptop with the following so
 2. [Praat](https://www.fon.hum.uva.nl/praat/).
 3. [Audacity](https://www.audacityteam.org/).
 4. Optional (advanced):
-	1. [R](https://cloud.r-project.org/) + [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/#download) + some R packages (`tidyverse`, [dalejbarr/elan](https://github.com/dalejbarr/elan), `knitr`, `DT`). Installation tips [here](https://r4ds.had.co.nz/introduction.html#prerequisites) and [here](https://www.datacamp.com/tutorial/installing-R-windows-mac-ubuntu).
+	1. [R](https://cloud.r-project.org/) + [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/#download) + some R packages ([tidyverse](https://www.tidyverse.org/), [dalejbarr/elan](https://github.com/dalejbarr/elan), [knitr](https://rdocumentation.org/packages/knitr/versions/1.39), [DT](https://rstudio.github.io/DT/)). Installation tips [here](https://r4ds.had.co.nz/introduction.html#prerequisites) and [here](https://www.datacamp.com/tutorial/installing-R-windows-mac-ubuntu).
 	2. [ffmpeg](https://ffmpeg.org/).
 
 ### Quick check
