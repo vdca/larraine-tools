@@ -32,3 +32,4 @@ To check that you have a working version for each program:
 	- `File > Open` + select the `sample1.wav` file.
 	- click the play button
 	- can you hear the audio?
+
