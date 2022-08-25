@@ -20,14 +20,24 @@ source('eaf2clips.R')
 #-------------------------------------------------------------------------------
 
 # directory where the raw audio files and associated ELAN .eaf file are located
-datadir <- '...'
+datadir <- '../data/'
 
 # run .eaf segmentation at once (for all .eaf files in datadir)
-# use segment_eaf() function
+segment_list <- segment_eaf(datadir,
+                            segment_proportion = 1,
+                            overwrite_csv = F,
+                            overwrite_wav = F,
+                            check_existing = T,
+                            eaf_pattern = '')
 
-"your code"
+# gather segments in current location in tibble format
+segment_df <- segment_list %>% bind_rows()
 
-# write info on all clips to tsv file
-
-"your code"
+# write info on all clips in datadir to tsv file
+segment_df %>%
+  mutate(ortho = str_squish(utterance)) %>% 
+  select(speaker_id, rec_location, ortho, translation,
+         clipbase, clipdir, recording_id, speechact,
+         start_time, end_time, duration) %>% 
+  write_tsv(paste0(datadir, 'clips.tsv'))
 

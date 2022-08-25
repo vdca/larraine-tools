@@ -36,7 +36,7 @@ library(DT)
 #-------------------------------------------------------------------------------
 
 # "...clips.tsv" files list each clip extracted from those recordings
-location_dir <- paste0('../data/media/')
+location_dir <- paste0('../data/')
 
 d <- list.files(location_dir, 'clips.tsv$', full.names = T, recursive = T) %>% 
   read_tsv()
@@ -70,7 +70,8 @@ dclips <- d %>%
 
 show_clips <- dclips %>%
   select(speaker_id, rec_location, speechact,
-         utterance, cliplink, clipbase, comments = oharra)
+         ortho, translation,
+         cliplink, clipbase)
 
 # documentation of dom options:
 # https://datatables.net/reference/option/dom (plfrtip)

@@ -53,7 +53,7 @@ get_segments <- function(datadir, eaffile) {
   
   # select only utt(erance) tier
   utt <- nonempty %>% 
-    filter(TIER_ID == 'utt') %>% 
+    filter(TIER_ID == 'ortho') %>% 
     rename(utterance = VALUE)
   
   # select speech act (sact) tier,
@@ -69,10 +69,10 @@ get_segments <- function(datadir, eaffile) {
   # this tier has a symbolic association stereotype with parent utt.
   # hence, its annotation_ref corresponds to the utt tier annotation_id.
   comm <- nonempty %>% 
-    filter(TIER_ID == 'comm') %>% 
+    filter(TIER_ID == 'eng_translation') %>% 
     mutate(ANNOTATION_ID = ANNOTATION_REF) %>% 
-    rename(oharra = VALUE) %>% 
-    select(ANNOTATION_ID, oharra)
+    rename(translation = VALUE) %>% 
+    select(ANNOTATION_ID, translation)
   
   # speaker_id tier
   speakers <- nonempty %>% 
@@ -86,12 +86,12 @@ get_segments <- function(datadir, eaffile) {
     left_join(sact) %>% 
     left_join(speakers) %>% 
     left_join(comm) %>% 
-    select(ANNOTATION_ID, t0, t1, utterance, speechact, speaker_id, oharra)
+    select(ANNOTATION_ID, t0, t1, utterance, speechact, speaker_id, translation)
   
   segments <- d %>% 
     mutate(start_time = t0/1000,
            end_time = t1/1000) %>% 
-    select(start_time, end_time, speechact, utterance, speaker_id, oharra) %>% 
+    select(start_time, end_time, speechact, utterance, speaker_id, translation) %>% 
     add_column(xfile = eaffile, .before = 1)
 
   return(segments)
@@ -245,10 +245,10 @@ segmentation_pipeline <- function(datadir,
     slice_head(prop = segment_proportion)
   
   # lehen: only segments with speechact feature (for ffmpeg segmentation)
-  # orain: sact-ik ez bada, 'libre' ezarri
+  # orain: sact-ik ez bada, 'default' ezarri
   segments <- segments %>% 
     # -> deal with missing sact (fill or filter)
-    mutate(speechact = if_else(is.na(speechact), 'libre', speechact)) %>%
+    mutate(speechact = if_else(is.na(speechact), 'default', speechact)) %>%
     # filter(!is.na(speechact)) %>% 
     # -> deal with missing speaker_id (fill or filter)
     # mutate(speaker_id = if_else(is.na(speaker_id), speaker_ref, speaker_id)) %>% 
