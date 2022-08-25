@@ -1,0 +1,9 @@
+speaker_id	rec_location	ortho	translation	clipbase	clipdir	recording_id	speechact	start_time	end_time	duration
+marcel		sorlekhia ützirik gazte nintzalarik	When I was young and I had left my home	sample1_0_2	../data	sample1	default	0.2	4.906	4.7059999999999995
+johañe		plazerez gose eta bürian hartürik	Hungry for pleasure and determined	sample1_10_031	../data	sample1	default	10.031	14.49	4.459
+marcel		behar niala	I needed	sample1_14_78	../data	sample1	default	14.78	16.64	1.8600000000000012
+marcel		alagera bizi	to live gaily	sample1_16_82	../data	sample1	default	16.82	18.748	1.9280000000000008
+txomin		bostetan geroztik	So many times afterwards  	sample1_18_86	../data	sample1	default	18.86	21.115	2.254999999999999
+johañe		nigar egiten dit	Have I cried  	sample1_21_28	../data	sample1	default	21.28	23.575	2.294999999999998
+txomin		Xiberua zuri	asdf	sample1_23_7	../data	sample1	default	23.7	27.8	4.100000000000001
+txomin		Parisen sarthü nintzan kurajez betherik	I went to Paris, full of courage	sample1_5_147	../data	sample1	default	5.147	9.892	4.744999999999999
