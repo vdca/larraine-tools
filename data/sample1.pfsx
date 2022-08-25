@@ -42,7 +42,7 @@
         <String>word</String>
     </pref>
     <pref key="TranscriptionTable.LastActiveRow">
-        <Int>1</Int>
+        <Int>8</Int>
     </pref>
     <pref key="SignalViewer.ZoomLevel">
         <Float>139.00002</Float>
@@ -50,6 +50,14 @@
     <pref key="LayoutManager.CurrentMode">
         <Int>2</Int>
     </pref>
+    <prefGroup key="TranscriptionMode.Temp.TierColors">
+        <pref key="ortho">
+            <Object class="java.awt.Color">0,90,160</Object>
+        </pref>
+        <pref key="eng_translation">
+            <Object class="java.awt.Color">0,90,160</Object>
+        </pref>
+    </prefGroup>
     <pref key="FrameLocation">
         <Object class="java.awt.Point">0,32</Object>
     </pref>
@@ -65,7 +73,7 @@
         <String>translation</String>
     </prefList>
     <pref key="SelectionBeginTime">
-        <Long>200</Long>
+        <Long>23700</Long>
     </pref>
     <prefGroup key="Silence Recognizer MPI-PL">
         <pref key="NoiseThresholdSetManually">
@@ -101,10 +109,10 @@
         </prefList>
     </prefGroup>
     <pref key="TimeScaleBeginTime">
-        <Long>179</Long>
+        <Long>0</Long>
     </pref>
     <pref key="MediaTime">
-        <Long>200</Long>
+        <Long>-1</Long>
     </pref>
     <prefGroup key="TierColors">
         <pref key="ortho">
@@ -178,7 +186,7 @@
         <Int>264</Int>
     </pref>
     <pref key="SelectionEndTime">
-        <Long>4906</Long>
+        <Long>27800</Long>
     </pref>
     <prefGroup key="Tag vowels (volume peaks of voiced timespans)">
         <pref key="epsilon">
@@ -303,7 +311,7 @@
         </pref>
     </prefGroup>
     <pref key="TranscriptionTable.LastActiveColumn">
-        <String>utt_type</String>
+        <String>translation</String>
     </pref>
     <prefList key="CommentViewer.Columns.Hidden">
         <String>Sender</String>
