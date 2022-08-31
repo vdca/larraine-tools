@@ -2,7 +2,6 @@
 
 Part of the [Basque Summer Tutorial in Language Documentation](https://basquesummertutorial.eus/), Larraine 2022.
 
-Contents:
 - [Set-up](#set-up)
 - [Recipes](#recipes)
 - [Resources](#resources)
